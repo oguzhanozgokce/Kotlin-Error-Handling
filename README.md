@@ -12,7 +12,7 @@
 
 ---
 
-[TR 🇹🇷](#tr---kotlin-error-handling-yapısı) | [EN 🇬🇧](#en---kotlin-error-handling-system)
+[TR 🇹🇷](#tr---kotlin-error-handling-yapısı) | [EN 🇬🇧](#kotlin-error-handling-system)
 
 ## Kotlin Error Handling Yapısı
 
@@ -126,6 +126,8 @@ Her türlü geri bildirim için:
 **Teşekkürler! Bu yapıyı dilediğiniz Android projesine entegre ederek daha okunabilir, sürdürülebilir ve test edilebilir bir hata yönetimi sağlayabilirsiniz.**
 
 ---
+
+<a name="kotlin-error-handling-system"></a>
 
 [EN]
 ## Kotlin Error Handling System
