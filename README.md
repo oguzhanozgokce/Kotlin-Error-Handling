@@ -1,4 +1,19 @@
-[TR] - [EN]
+<h1 align="center">Kotlin Error Handling</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Kotlin-1.9.0-blueviolet?logo=kotlin&logoColor=white" />
+  <img src="https://img.shields.io/badge/Android-Error%20Handling-green?logo=android&logoColor=white" />
+  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20Kotlin-informational?logo=jetpackcompose" />
+</p>
+
+<p align="center">
+  Clean, testable and extensible error handling structure for Android apps using Kotlin + Flow
+</p>
+
+---
+
+[TR 🇹🇷](#tr---kotlin-error-handling-yapısı) | [EN 🇬🇧](#en---kotlin-error-handling-system)
+
 ## Kotlin Error Handling Yapısı
 
 Bu proje, **Android ve Kotlin** tabanlı uygulamalarda kullanılmak üzere tasarlanmış, modüler ve yeniden kullanılabilir bir **API Hata Yönetimi (Error Handling)** altyapısıdır.
@@ -8,21 +23,21 @@ Karmaşık API yanıtlarını sadeleştirmek, hataları sınıflandırmak ve UI 
 
 ---
 
-## 📦 Ana Bileşenler
+## 📌 Ana Bileşenler
 
-### ✅ `safeApiCall`
+### 🔹 `safeApiCall`
 Ağ isteklerini güvenli şekilde saran inline bir fonksiyondur.
 - `try-catch` blokları içerir
 - Başarılı sonuçları `Resource.Success`, hataları `Resource.Error` olarak döner
 - `flowOn(Dispatchers.IO)` ile IO thread’de çalışır
 
-### ✅ `Resource<T>`
+### 🔹 `Resource<T>`
 Veri katmanından UI’a üç durum taşıyan bir sealed class:
 - `Resource.Success<T>(data)`
 - `Resource.Error(apiError)`
 - `Resource.Loading`
 
-### ✅ `ApiError`
+### 🔹 `ApiError`
 Sunucu ve ağ hatalarını sınıflandırır:
 - `ClientError`
 - `ServerError`
@@ -30,12 +45,12 @@ Sunucu ve ağ hatalarını sınıflandırır:
 - `UnknownError`
 - `HttpError`
 
-### ✅ `ApiErrorMapper`
+### 🔹 `ApiErrorMapper`
 API'den dönen hata gövdelerini (`errorBody`) çözümleyerek anlamlı `ApiError` nesnelerine çevirir.
 - `DefaultApiErrorMapper` → JSON gövdelerden "message" çeker
 - `UserApiErrorMapper` → 403/404 gibi özel durumlar için özelleştirilmiş hata mesajları döner
 
-### ✅ `collectResource`
+### 🔹 `collectResource`
 `Flow<Resource<T>>` akışlarını ayrıştırmak için UI tarafında kullanılan kolaylaştırıcı bir fonksiyon.
 ```kotlin
 flow.collectResource(
@@ -99,7 +114,7 @@ errorhandling/
 
 ---
 
-## ✍️ Katkı Sağlama
+## 🤝 Katkı Sağlama
 PR'lar memnuniyetle karşılanır. Hataları tartışmak ya da yeni hata türleri eklemek için Issue açabilirsiniz.
 
 Her türlü geri bildirim için:
@@ -117,26 +132,26 @@ Her türlü geri bildirim için:
 
 This project provides a modular and reusable **API Error Handling** infrastructure designed for **Android and Kotlin** applications.
 
-## 🚀 Purpose
+## 📌 Purpose
 To simplify complex API responses, categorize errors, and manage **`Loading / Success / Error`** states in the UI layer using `safeApiCall` and `Resource` wrappers.
 
 ---
 
-## 📦 Core Components
+## 🧩 Core Components
 
-### ✅ `safeApiCall`
+### 🔹 `safeApiCall`
 An inline function that wraps network calls safely:
 - Contains `try-catch` logic
 - Emits `Resource.Success` on success and `Resource.Error` on failure
 - Runs on the IO dispatcher via `flowOn(Dispatchers.IO)`
 
-### ✅ `Resource<T>`
+### 🔹 `Resource<T>`
 A sealed class representing three UI-related states:
 - `Resource.Success<T>(data)`
 - `Resource.Error(apiError)`
 - `Resource.Loading`
 
-### ✅ `ApiError`
+### 🔹 `ApiError`
 Represents categorized error types:
 - `ClientError`
 - `ServerError`
@@ -144,12 +159,12 @@ Represents categorized error types:
 - `UnknownError`
 - `HttpError`
 
-### ✅ `ApiErrorMapper`
+### 🔹 `ApiErrorMapper`
 Parses `errorBody` from the API and converts it to a meaningful `ApiError` instance.
 - `DefaultApiErrorMapper` → Extracts `message` field from JSON
 - `UserApiErrorMapper` → Custom messages for codes like 403 / 404
 
-### ✅ `collectResource`
+### 🔹 `collectResource`
 Extension function to handle `Flow<Resource<T>>` emissions more cleanly in the UI:
 ```kotlin
 flow.collectResource(
@@ -213,7 +228,7 @@ errorhandling/
 
 ---
 
-## ✍️ Contributing
+## 🤝 Contributing
 Pull requests are welcome. Feel free to open an issue to discuss bugs or propose new error types.
 
 ---
