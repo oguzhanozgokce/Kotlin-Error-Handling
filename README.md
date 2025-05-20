@@ -1,7 +1,7 @@
 <h1 align="center">Kotlin Error Handling</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Kotlin-1.9.0-blueviolet?logo=kotlin&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kotlin-2.0.0-blueviolet?logo=kotlin&logoColor=white" />
   <img src="https://img.shields.io/badge/Android-Error%20Handling-green?logo=android&logoColor=white" />
   <img src="https://img.shields.io/badge/Platform-Android%20%7C%20Kotlin-informational?logo=jetpackcompose" />
 </p>
